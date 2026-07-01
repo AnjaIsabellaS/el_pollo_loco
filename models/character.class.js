@@ -48,8 +48,8 @@ class Character extends MovableObject {
                 this.otherDirection = true;
             }
 
-            if(this.world.keyboard.UP) {
-                this.speedY = 20;
+            if(this.world.keyboard.UP && !this.isAboveGround()) {
+                this.speedY = 30;
             }
 
             this.world.camera_x = -this.x + 100;
